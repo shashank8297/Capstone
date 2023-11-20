@@ -1,0 +1,8 @@
+package com.infinite.crm.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface IFeedback extends JpaRepository<Feedback, long>{
+
+}

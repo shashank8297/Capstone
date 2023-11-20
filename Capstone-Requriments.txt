@@ -1,0 +1,20 @@
+Frontend: React
+Springboot Layered Arch
+Sonarqube report ---> 100M
+Testing report ---> 100M
+SpringBoot + Hibernate
+any rest rest controller ---> Swagger
+*Acutators should be added.
+Log4j
+Comments.
+ER-Diagrams/Class Diagram(Normalizations).
+Frontend validation.
+Database--MySql
+PPT
+
+
+Capcha
+chatbot
+
+
+

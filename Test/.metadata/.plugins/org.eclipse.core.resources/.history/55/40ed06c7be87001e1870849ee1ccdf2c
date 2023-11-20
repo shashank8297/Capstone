@@ -1,0 +1,25 @@
+package com.infinite.crm.pojo;
+import javax.persistence.*;
+
+@Entity
+@Table(name = "sell_history")
+public class SellHistory {
+ 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "sell_id")
+    private Long sellId;
+ 
+    @ManyToOne
+    @JoinColumn(name = "admin_id", nullable = false)
+    private Admin admin;
+ 
+    @ManyToOne
+    @JoinColumn(name = "product_id", nullable = false)
+    private Product product;
+ 
+    @Column(name = "sell_date", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private java.sql.Timestamp sellDate;
+ 
+    // Getters and Setters
+}

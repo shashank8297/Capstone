@@ -1,0 +1,5 @@
+package com.infinite.crm.pojo;
+
+public class Admin {
+
+}

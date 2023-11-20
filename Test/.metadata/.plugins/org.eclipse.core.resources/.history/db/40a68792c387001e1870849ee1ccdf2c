@@ -1,0 +1,5 @@
+package com.infinite.crm.repository;
+
+public interface IAdminRepo extends JpaRepository<Admin, long>{
+
+}

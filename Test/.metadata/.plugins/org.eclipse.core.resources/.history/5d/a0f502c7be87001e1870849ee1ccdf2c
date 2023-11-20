@@ -1,0 +1,43 @@
+package com.infinite.crm.pojo;
+import javax.persistence.*;
+import java.util.List;
+ 
+@Entity
+@Table(name = "product")
+public class Product {
+ 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "product_id")
+    private Long productId;
+ 
+    @Column(name = "product_name", nullable = false)
+    private String productName;
+ 
+    private String description;
+ 
+    @Column(nullable = false)
+    private double price;
+ 
+    @Column(name = "admin_id")
+    private Long adminId;
+ 
+    @Column(name = "is_public")
+    private boolean isPublic;
+ 
+    @Lob
+    @Column(name = "image_data")
+    private byte[] imageData;
+ 
+    @ManyToOne
+    @JoinColumn(name = "admin_id", nullable = false)
+    private Admin admin;
+ 
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private List<PurchaseHistory> purchaseHistoryList;
+ 
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private List<SellHistory> sellHistoryList;
+ 
+    // Getters and Setters
+}

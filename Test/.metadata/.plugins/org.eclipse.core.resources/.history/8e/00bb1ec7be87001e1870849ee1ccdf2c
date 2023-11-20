@@ -1,0 +1,21 @@
+package com.infinite.crm.pojo;
+import javax.persistence.*;
+
+@Entity
+@Table(name = "feedback")
+public class Feedback {
+ 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "feedback_id")
+    private Long feedbackId;
+ 
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+ 
+    @Column(name = "feedback_text", columnDefinition = "TEXT", nullable = false)
+    private String feedbackText;
+ 
+    // Getters and Setters
+}
